@@ -1,0 +1,117 @@
+<div class="row">
+    
+    <div class="col-xs-4 col-md-12">
+       <h3 [innerText]="welcome.TITLE"></h3>
+    </div>
+
+</div>
+
+<div class="row">
+    <div class="col-xs-4 col-md-12"
+        [innerText]="welcome.SUBTITLE">
+    </div>
+
+    <div class="col-xs-4 col-md-2">
+        <mat-list>
+            
+            <mat-list-item>
+                <div mat-line>
+                    <button mat-button
+                       color="accent"
+                       routerLink="/filmes/catalogo/lista"
+                       [innerText]="welcome.BUTTON_MOVIES">
+                    </button>
+                </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            
+            <mat-list-item>
+                <div mat-line>
+                    <button mat-button
+                       color="accent"
+                       [innerText]="welcome.BUTTON_CATEGORIES">
+                    </button>
+                </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+
+            <mat-list-item>
+                <div mat-line>
+                    <button mat-button
+                       color="accent"
+                       [innerText]="welcome.BUTTON_ACTORS">
+                    </button>
+                </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+
+            <mat-list-item>
+                <div mat-line>
+                    <button mat-button
+                       color="accent"
+                       [innerText]="welcome.BUTTON_CUSTOMERS">
+                    </button>
+                </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+
+        </mat-list>
+
+    </div>
+
+    <div class="col-xs-4 col-md-2">
+        <mat-list>
+            
+            <mat-list-item>
+                <div mat-line>
+                    <button mat-button
+                       color="primary"
+                       [innerText]="welcome.BUTTON_RENT">
+                    </button>
+                </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            
+            <mat-list-item>
+                <div mat-line>
+                    <button mat-button
+                       color="primary"
+                       [innerText]="welcome.BUTTON_PAYMENTS">
+                    </button>
+                </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+
+        </mat-list>
+
+    </div>
+
+    <div class="col-xs-4 col-md-2">
+        <mat-list>
+            
+            <mat-list-item>
+                <div mat-line>
+                    <button mat-button
+                       color="warn"
+                       [innerText]="welcome.BUTTON_STORES">
+                    </button>
+                </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+            
+            <mat-list-item>
+                <div mat-line>
+                    <button mat-button
+                       color="warn"
+                       [innerText]="welcome.BUTTON_EMPLOYES">
+                    </button>
+                </div>
+            </mat-list-item>
+            <mat-divider></mat-divider>
+
+        </mat-list>
+
+    </div>
+
+</div>
+

@@ -1,0 +1,26 @@
+{
+    "filmes": [
+        {
+            "codigo": "1",
+            "titulo": "ACADEMY DINOSAUR",
+            "descricao": "A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies",
+            "anoLancamento": 2000,
+            "diasDeAluguel": 3,
+            "valorAluguel": 9.90,
+            "duracao": "01:50",
+            "valorDeCompra": 20.99,
+            "especiais": "Trailers,Deleted Scenes,Behind the Scenes" 
+        },
+        {
+            "codigo": "2",
+            "titulo": "ACE GOLDFINGER",
+            "descricao": "A Astounding Epistle of a Database Administrator And a Explorer who must Find a Car in Ancient China",
+            "anoLancamento": 2000,
+            "diasDeAluguel": 3,
+            "valorAluguel": 9.90,
+            "duracao": "01:50",
+            "valorDeCompra": 20.99,
+            "especiais": "Trailers,Deleted Scenes,Behind the Scenes" 
+        }
+    ]
+}
