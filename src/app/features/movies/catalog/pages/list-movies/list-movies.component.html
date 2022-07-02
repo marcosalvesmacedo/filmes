@@ -1,10 +1,16 @@
+
 <div class="row">
-    
-    <div class="row">
+    <div class="col-xs-4 col-md-12">
         <h5>Lista</h5>
     </div>
     
-    <div class="col-xs-4 col-md-12">
+</div>
+
+<br>
+
+<div class="row">
+    
+    <div class="col-xs-4 col-md-12 mat-elevation-z2">
     
         <table mat-table [dataSource]="catalogFacade.dataSource">
         
@@ -44,4 +50,12 @@
 
     </div>
 
+</div>
+
+<br>
+
+<div class="row">
+    <div class="col-xs-4 col-md-12">
+        <app-form-movies></app-form-movies>
+    </div>
 </div>

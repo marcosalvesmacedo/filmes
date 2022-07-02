@@ -1,0 +1,98 @@
+<div class="row">
+    <div class="col-xs-4 col-md-12">
+        <h5>Inserir novo filme</h5>
+    </div>
+    
+</div>
+
+<div class="row">
+    <div class="col-xs-4 col-md-8">
+
+        <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+
+            <div class="row">
+
+                 <div class="col-xs-4 col-md-8">
+                     <mat-form-field appearance="outline">
+                         <mat-label>Título</mat-label>
+                         <input matInput placeholder="Título" name="title" ngModel #title>
+                         <mat-hint>Nome do filme completo</mat-hint>
+                     </mat-form-field>
+                 </div>
+
+                 <div class="col-xs-4 col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Valor de locação</mat-label>
+                        <input matInput placeholder="Valor da locação" name="rentValue" ngModel #rentValue>
+                        <mat-hint>Custo pela quantidade de dias de locação</mat-hint>
+                    </mat-form-field>
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="row">
+                
+                <div class="col-xs-4 col-md-12">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Descrição</mat-label>
+                        <textarea rows="7" matInput placeholder="Descrição" name="description" ngModel #description></textarea>
+                        <mat-hint>Um breve trecho explicativo do filme</mat-hint>
+                    </mat-form-field>
+                </div>
+
+           </div>
+         
+           <br>
+
+           <div class="row">
+                
+                <div class="col-xs-4 col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Ano de lançamento</mat-label>
+                        <input matInput placeholder="Ano de lançamento" name="releaseYear" ngModel #releaseYear>
+                        <mat-hint>Ano saiu em cartaz</mat-hint>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-xs-4 col-md-4">
+                    <mat-form-field appearance="outline">
+                        <mat-label>Dia de aluguel</mat-label>
+                        <input matInput placeholder="Dias de aluguel" name="rentDays" ngModel #rentDays>
+                        <mat-hint>Quantidade de dias para entrega do filme</mat-hint>
+                    </mat-form-field>
+                </div>
+
+                <div class="col-xs-4 col-md-4">
+                    <button mat-button
+                        type="button"
+                       color="accent">
+                       Voltar
+                    </button>
+
+                    <button mat-button
+                       type="submit"
+                       color="primary">
+                       Salvar
+                    </button>
+
+                </div>
+
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-xs-4 col-md-12">
+                    <pre>
+                        {{ f.value | json }}
+                    </pre>
+                </div>
+            </div>
+            
+         </form>
+
+    </div>
+</div>
+
