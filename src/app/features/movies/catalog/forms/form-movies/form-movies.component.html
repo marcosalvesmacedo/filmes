@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-xs-4 col-md-12">
-        <h5>Inserir novo filme</h5>
+        <h5 [textContent]="labels.FORM_TITLE"></h5>
     </div>
     
 </div>
@@ -13,18 +13,47 @@
             <div class="row">
 
                  <div class="col-xs-4 col-md-8">
-                     <mat-form-field appearance="outline">
-                         <mat-label>Título</mat-label>
-                         <input matInput placeholder="Título" name="title" ngModel #title>
-                         <mat-hint>Nome do filme completo</mat-hint>
+                     <mat-form-field  appearance="outline">
+                         
+                        <mat-label [textContent]="labels.FORM_MOVIES.TITLE"></mat-label>
+
+                        <input matInput
+                            [placeholder]="labels.FORM_MOVIES.TITLE"
+                            name="title"
+                            ngModel
+                            #title 
+                            required/>
+
+                        <mat-hint [textContent]="labels.FORM_MOVIES_HINT.TITLE"></mat-hint>
+                        
+                        <mat-error 
+                            *ngIf="f.controls?.title?.invalid"
+                            [textContent]="labels.MANDATORY_MESSAGE_FORM">
+                        </mat-error>
+
                      </mat-form-field>
                  </div>
 
                  <div class="col-xs-4 col-md-4">
                     <mat-form-field appearance="outline">
-                        <mat-label>Valor de locação</mat-label>
-                        <input matInput placeholder="Valor da locação" name="rentValue" ngModel #rentValue>
-                        <mat-hint>Custo pela quantidade de dias de locação</mat-hint>
+                        
+                        <mat-label [textContent]="labels.FORM_MOVIES.RENT_VALUE">
+                        </mat-label>
+                        
+                        <input matInput
+                            [placeholder]="labels.FORM_MOVIES.RENT_VALUE"
+                            name="rentValue"
+                            ngModel
+                            #rentValue
+                            required/>
+                        
+                        <mat-hint [textContent]="labels.FORM_MOVIES_HINT.RENT_VALUE"></mat-hint>
+
+                        <mat-error 
+                            *ngIf="f.controls?.rentValue?.invalid"
+                            [textContent]="labels.MANDATORY_MESSAGE_FORM">
+                        </mat-error>
+
                     </mat-form-field>
                 </div>
 
@@ -36,9 +65,25 @@
                 
                 <div class="col-xs-4 col-md-12">
                     <mat-form-field appearance="outline">
-                        <mat-label>Descrição</mat-label>
-                        <textarea rows="7" matInput placeholder="Descrição" name="description" ngModel #description></textarea>
-                        <mat-hint>Um breve trecho explicativo do filme</mat-hint>
+                        
+                        <mat-label [textContent]="labels.FORM_MOVIES.DESCRIPTION"></mat-label>
+                        
+                        <textarea rows="7"
+                                matInput
+                                [placeholder]="labels.FORM_MOVIES.DESCRIPTION"
+                                name="description"
+                                ngModel
+                                #description
+                                required>
+                        </textarea>
+                        
+                        <mat-hint [textContent]="labels.FORM_MOVIES_HINT.DESCRIPTION"></mat-hint>
+
+                        <mat-error 
+                            *ngIf="f.controls?.description?.invalid"
+                            [textContent]="labels.MANDATORY_MESSAGE_FORM">
+                        </mat-error>
+
                     </mat-form-field>
                 </div>
 
@@ -50,31 +95,61 @@
                 
                 <div class="col-xs-4 col-md-4">
                     <mat-form-field appearance="outline">
-                        <mat-label>Ano de lançamento</mat-label>
-                        <input matInput placeholder="Ano de lançamento" name="releaseYear" ngModel #releaseYear>
-                        <mat-hint>Ano saiu em cartaz</mat-hint>
+                        
+                        <mat-label [textContent]="labels.FORM_MOVIES.RELEASE_YEAR"></mat-label>
+
+                        <input matInput
+                            [placeholder]="labels.FORM_MOVIES.RELEASE_YEAR"
+                            name="releaseYear"
+                            ngModel
+                            #releaseYear 
+                            required/>
+
+                        <mat-hint [textContent]="labels.FORM_MOVIES_HINT.RELEASE_YEAR"></mat-hint>
+
+                        <mat-error 
+                            *ngIf="f.controls?.releaseYear?.invalid"
+                            [textContent]="labels.MANDATORY_MESSAGE_FORM">
+                        </mat-error>
+
                     </mat-form-field>
                 </div>
 
                 <div class="col-xs-4 col-md-4">
                     <mat-form-field appearance="outline">
-                        <mat-label>Dia de aluguel</mat-label>
-                        <input matInput placeholder="Dias de aluguel" name="rentDays" ngModel #rentDays>
-                        <mat-hint>Quantidade de dias para entrega do filme</mat-hint>
+                        
+                        <mat-label [textContent]="labels.FORM_MOVIES.RENT_DAYS"></mat-label>
+                        
+                        <input matInput
+                            [placeholder]="labels.FORM_MOVIES.RENT_DAYS"
+                            name="rentDays"
+                            ngModel
+                            #rentDays 
+                            required/>
+                    
+                        <mat-hint [textContent]="labels.FORM_MOVIES_HINT.RENT_DAYS"></mat-hint>
+
+                        <mat-error 
+                            *ngIf="f.controls?.rentDays?.invalid"
+                            [textContent]="labels.MANDATORY_MESSAGE_FORM">
+                        </mat-error>
+
                     </mat-form-field>
                 </div>
 
                 <div class="col-xs-4 col-md-4">
                     <button mat-button
                         type="button"
-                       color="accent">
-                       Voltar
+                       color="accent"
+                       [textContent]="labels.GO_BACK_BUTTON"
+                       routerLink="/home/bem-vindo">
                     </button>
 
                     <button mat-button
                        type="submit"
-                       color="primary">
-                       Salvar
+                       color="primary"
+                       [textContent]="labels.SAVE_BUTTON"
+                       [disabled]="f.invalid">
                     </button>
 
                 </div>

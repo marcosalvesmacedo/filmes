@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import { FormGroup } from '@angular/forms';
+import { Component, EventEmitter, Output } from '@angular/core';
+import { MOVIES } from '../../../constants/common.constants';
 
 @Component({
   selector: 'app-form-movies',
@@ -7,10 +7,14 @@ import { FormGroup } from '@angular/forms';
   styleUrls: ['./form-movies.component.scss']
 })
 export class FormMoviesComponent {
- 
+  
+  public labels = MOVIES;
+  @Output() submitForm = new EventEmitter<any>();
+
   constructor() {}
   
   public onSubmit(form: any): void {
-    console.log(form.value);
+    this.submitForm.emit(form.value);
+    form.resetForm();
   }
 }
